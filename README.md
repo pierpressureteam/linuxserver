@@ -1,1 +1,3 @@
 # linuxserver
+
+Copyright PierPressureTeam
