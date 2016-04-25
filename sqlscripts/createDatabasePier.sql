@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`usersaccount_has_ships` (
   INDEX `fk_usersaccount_has_ships_usersaccount_idx` (`usersaccount_username` ASC)  COMMENT '',
   CONSTRAINT `fk_usersaccount_has_ships_usersaccount`
     FOREIGN KEY (`usersaccount_username`)
-    REFERENCES `mydb`.`usersaccount` (`username`)
+    REFERENCES `pier_pressure_database`.`usersaccount` (`username`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_usersaccount_has_ships_ships1`
