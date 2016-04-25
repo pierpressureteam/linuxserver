@@ -43,6 +43,6 @@ public class getShipInfo {
         checkShip.setLastUpdateTime(lastUpdateShipInfo);
 
         System.out.println(checkShip.getMmsi() + ": Coor: " + checkShip.getxCoor() + "," + checkShip.getyCoor() + " Speed: " + checkShip.getSpeed() + " Update: " + checkShip.getLastUpdateTime());
-
+        InsertShipLocation.insertLocation(checkShip);
     }
 }
