@@ -1,0 +1,2 @@
+#!/bin/bash 
+curl -X GET --header "Accept: application/json" --header "Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJocm80IiwiaXNzIjoiMTI3LjAuMC4xIiwiZXhwIjoxNDYyMjE2ODMzLCJpYXQiOjE0NjE2MTIwMzN9.sRh3ryM3T7KJGCvTDx5s7iMZa0SVhlyzdNJuU_Cytnw " "http://backenddev.teqplay.nl/ship/244660136" > ../JSON/ship.json

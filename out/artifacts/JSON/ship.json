@@ -1,0 +1,35 @@
+{
+  "mmsi" : "244660136",
+  "eni" : "2313841",
+  "category" : "BARGE",
+  "location" : {
+    "latitude" : 51.47844,
+    "longitude" : 6.67968,
+    "coordinates" : [ 6.67968, 51.47844 ],
+    "type" : "Point"
+  },
+  "courseOverGround" : 164.8,
+  "timeLastUpdate" : 1461607700000,
+  "imoNumber" : "0",
+  "name" : "PRIMO",
+  "shipType" : "CARGO",
+  "status" : "MOORED",
+  "speedOverGround" : 5.5,
+  "callSign" : "PE7316",
+  "coms" : 0,
+  "extras" : {
+    "coms" : 0
+  },
+  "trueHeading" : 511,
+  "positionOfTransponder" : {
+    "distanceToBow" : 79,
+    "distanceToStern" : 10,
+    "distanceToPort" : 8,
+    "distanceToStarboard" : 2
+  },
+  "eta" : 1461196800000,
+  "maxDraught" : 0.0,
+  "destination" : "",
+  "userProfileAssociated" : false,
+  "role" : "CARGOBARGE"
+}
