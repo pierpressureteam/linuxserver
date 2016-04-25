@@ -15,10 +15,10 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- Schema mydb
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `pier_pressure_database` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `mydb` ;
+USE `pier_pressure_database` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`usersaccount`
+-- Table `pier_pressure_database`.`usersaccount`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`usersaccount` (
   `username` VARCHAR(40) NOT NULL COMMENT '',
@@ -30,7 +30,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`shiptype`
+-- Table `pier_pressure_database`.`shiptype`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`shiptype` (
   `typename` VARCHAR(50) NOT NULL COMMENT '',
@@ -43,7 +43,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`ships`
+-- Table `pier_pressure_database`.`ships`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`ships` (
   `mmsi` INT NOT NULL COMMENT '',
@@ -59,7 +59,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`usersaccount_has_ships`
+-- Table `pier_pressure_database`.`usersaccount_has_ships`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`usersaccount_has_ships` (
   `usersaccount_username` VARCHAR(40) NOT NULL COMMENT '',
@@ -81,7 +81,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`aisinformation`
+-- Table `pier_pressure_database`.`aisinformation`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`aisinformation` (
   `idaisinformation` INT NOT NULL AUTO_INCREMENT COMMENT '',
