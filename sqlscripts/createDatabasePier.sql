@@ -85,7 +85,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`aisinformation` (
   `idaisinformation` INT NOT NULL AUTO_INCREMENT COMMENT '',
-  `current_time_ais` DATE NOT NULL COMMENT '',
+  `current_time_ais` INT NOT NULL COMMENT '',
   `x_coordinates` INT NOT NULL COMMENT '',
   `y_coordinates` INT NOT NULL COMMENT '',
   `speed` INT NOT NULL COMMENT '',
