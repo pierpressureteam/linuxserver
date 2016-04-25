@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/linuxserver_jar</output-path>
     <root id="archive" name="linuxserver.jar">
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$USER_HOME$/Documents/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/linuxserver_jar/META-INF/MANIFEST.MF" />
       </element>
       <element id="module-output" name="linuxserver" />
       <element id="library" level="project" name="json-20160212" />

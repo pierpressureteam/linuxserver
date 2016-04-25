@@ -36,7 +36,13 @@ public class getShipInfo {
         Double speed = (Double) shipJsonObject.get("speedOverGround");
         Long lastUpdateShipInfo = (Long) shipJsonObject.get("timeLastUpdate");
 
-        System.out.println("Coor: " + xCoordinates + "," + yCoordinates + " Speed: " + speed + " Update: " + lastUpdateShipInfo);
+        shipInfoObject checkShip = new shipInfoObject();
+        checkShip.setSpeed(speed);
+        checkShip.setxCoor(xCoordinates);
+        checkShip.setyCoor(yCoordinates);
+        checkShip.setLastUpdateTime(lastUpdateShipInfo);
+
+        System.out.println(checkShip.getMmsi() + ": Coor: " + checkShip.getxCoor() + "," + checkShip.getyCoor() + " Speed: " + checkShip.getSpeed() + " Update: " + checkShip.getLastUpdateTime());
 
     }
 }

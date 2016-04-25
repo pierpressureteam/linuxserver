@@ -14,13 +14,12 @@ public class Main {
 
             private static void checkTimeShipInformation() throws Exception{
                 Timer timer = new Timer();
-                getShipInfo hoi = new getShipInfo();
+                getShipInfo ship = new getShipInfo();
                 timer.schedule( new TimerTask() {
                     public void run() {
                         try {
-                            hoi.getShipOfApi();
-                            hoi.setShipInfoOfApi();
-                            System.out.println("Succes");
+                            ship.getShipOfApi();
+                            ship.setShipInfoOfApi();
                         }catch(Exception e){
                             System.out.println(e);
                         }
