@@ -20,7 +20,7 @@ USE `mydb` ;
 -- -----------------------------------------------------
 -- Table `mydb`.`usersaccount`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`usersaccount` (
+CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`usersaccount` (
   `username` VARCHAR(40) NOT NULL COMMENT '',
   `password` VARCHAR(40) NOT NULL COMMENT '',
   `email` VARCHAR(100) NOT NULL COMMENT '',
@@ -32,7 +32,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`shiptype`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`shiptype` (
+CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`shiptype` (
   `typename` VARCHAR(50) NOT NULL COMMENT '',
   `length` INT NOT NULL COMMENT '',
   `with` INT NOT NULL COMMENT '',
@@ -45,14 +45,14 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`ships`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`ships` (
+CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`ships` (
   `mmsi` INT NOT NULL COMMENT '',
   `shiptype_typename` VARCHAR(50) NOT NULL COMMENT '',
   PRIMARY KEY (`mmsi`, `shiptype_typename`)  COMMENT '',
   INDEX `fk_ships_shiptype1_idx` (`shiptype_typename` ASC)  COMMENT '',
   CONSTRAINT `fk_ships_shiptype1`
     FOREIGN KEY (`shiptype_typename`)
-    REFERENCES `mydb`.`shiptype` (`typename`)
+    REFERENCES `pier_pressure_database`.`shiptype` (`typename`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -61,7 +61,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`usersaccount_has_ships`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`usersaccount_has_ships` (
+CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`usersaccount_has_ships` (
   `usersaccount_username` VARCHAR(40) NOT NULL COMMENT '',
   `ships_mmsi` INT NOT NULL COMMENT '',
   PRIMARY KEY (`usersaccount_username`, `ships_mmsi`)  COMMENT '',
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`usersaccount_has_ships` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_usersaccount_has_ships_ships1`
     FOREIGN KEY (`ships_mmsi`)
-    REFERENCES `mydb`.`ships` (`mmsi`)
+    REFERENCES `pier_pressure_database`.`ships` (`mmsi`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -83,7 +83,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`aisinformation`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`aisinformation` (
+CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`aisinformation` (
   `idaisinformation` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `current_time_ais` DATE NOT NULL COMMENT '',
   `x_coordinates` INT NOT NULL COMMENT '',
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`aisinformation` (
   INDEX `fk_aisinformation_ships1_idx` (`ships_mmsi` ASC, `ships_shiptype_typename` ASC)  COMMENT '',
   CONSTRAINT `fk_aisinformation_ships1`
     FOREIGN KEY (`ships_mmsi` , `ships_shiptype_typename`)
-    REFERENCES `mydb`.`ships` (`mmsi` , `shiptype_typename`)
+    REFERENCES `pier_pressure_database`.`ships` (`mmsi` , `shiptype_typename`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
