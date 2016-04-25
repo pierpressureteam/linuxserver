@@ -19,6 +19,7 @@ public class Main {
                     public void run() {
                         try {
                             hoi.getShipOfApi();
+                            hoi.setShipInfoOfApi();
                             System.out.println("Succes");
                         }catch(Exception e){
                             System.out.println(e);

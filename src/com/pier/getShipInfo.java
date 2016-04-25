@@ -1,5 +1,9 @@
 package com.pier;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 import java.io.*;
 
 import static com.pier.Main.newestToken;
@@ -19,14 +23,20 @@ public class getShipInfo {
         Process processChmodBash = Runtime.getRuntime().exec("chmod u+x ../serverbash/ship.sh");
         Process processMakeBash = Runtime.getRuntime().exec("../serverbash/ship.sh");
         processMakeBash.waitFor();
+    }
 
+    public void setShipInfoOfApi() throws Exception{
+        JSONParser shipParser = new JSONParser();
+        Object shipObject = shipParser.parse(new FileReader("../JSON/ship.json"));
+        JSONObject shipJsonObject = (JSONObject) shipObject;
+        JSONObject locationShipObject = (JSONObject) shipJsonObject.get("location");
 
-        // Grab output and print to display
-        BufferedReader reader = new BufferedReader(new InputStreamReader(processMakeBash.getInputStream()));
+        Double xCoordinates = (Double) locationShipObject.get("latitude");
+        Double yCoordinates = (Double) locationShipObject.get("longitude");
+        Double speed = (Double) shipJsonObject.get("speedOverGround");
+        Long lastUpdateShipInfo = (Long) shipJsonObject.get("timeLastUpdate");
 
-        String line = "";
-        while ((line = reader.readLine()) != null) {
-            System.out.println(line);
-        }
+        System.out.println("Coor: " + xCoordinates + "," + yCoordinates + " Speed: " + speed + " Update: " + lastUpdateShipInfo);
+
     }
 }
