@@ -4,16 +4,12 @@ import java.sql.*;
 /**
  * Created by rodero on 25-4-16.
  */
-public class InsertShipLocation {
+public class InsertShipLocation extends DatabaseConnection{
     public static void insertLocation(shipInfoObject checkShip) {
 // create a mysql database connection
         try{
-        String myDriver = "org.gjt.mm.mysql.Driver";
-        String myUrl = "jdbc:mysql://localhost/pier_pressure_database";
-        Class.forName(myDriver);
-        Connection conn = DriverManager.getConnection(myUrl, "root", "Lucky2002");
-
-
+            Class.forName(myDriver);
+            Connection conn = DriverManager.getConnection(myUrl, username, password);
         // the mysql insert statement
         String query = " insert into aisinformation (current_time_ais, x_coordinates, y_coordinates, speed, ships_mmsi)"
                 + " values (?, ?, ?, ?, ?)";

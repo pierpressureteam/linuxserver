@@ -15,11 +15,13 @@ public class Main {
             private static void checkTimeShipInformation() throws Exception{
                 Timer timer = new Timer();
                 getShipInfo ship = new getShipInfo();
+                Co2Calculator ship2 = new Co2Calculator();
                 timer.schedule( new TimerTask() {
                     public void run() {
                         try {
                             ship.getShipOfApi();
-                            ship.setShipInfoOfApi();
+                            ship2.Calculate();
+                            //ship.setShipInfoOfApi();
                         }catch(Exception e){
                             System.out.println(e);
                         }
