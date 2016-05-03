@@ -24,7 +24,7 @@ public class Main {
                             for(int i = 0; i < allShips.size(); i++) {
                                 ship.getShipOfApi(allShips.get(i));
                                 //ship2.Calculate();
-                                //ship.setShipInfoOfApi();
+                                allShips.set(i,ship.setShipInfoOfApi(allShips.get(i)));
                             }
                         }catch(Exception e){
                             System.out.println(e);

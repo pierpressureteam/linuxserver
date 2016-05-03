@@ -12,6 +12,7 @@ public class shipInfoObject {
     private double speed;
     private double xCoor;
     private double yCoor;
+    private double CO2;
     private Long lastUpdateTime;
 
     public void setMmsi(int mmsiSetter){
@@ -37,6 +38,8 @@ public class shipInfoObject {
     public void setyCoor(double yCoorSetter){
         yCoor = yCoorSetter;
     }
+
+    public void setCO2(double CO2Setter){CO2 = CO2Setter;}
 
     public void setLastUpdateTime(Long lastUpdateTimeSetter){
         lastUpdateTime = lastUpdateTimeSetter;
@@ -65,6 +68,8 @@ public class shipInfoObject {
     public double getyCoor() {
         return yCoor;
     }
+
+    public double getCO2(){return CO2;}
 
     public Long getLastUpdateTime() {
         return lastUpdateTime;

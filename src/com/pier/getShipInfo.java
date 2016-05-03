@@ -23,11 +23,11 @@ public class getShipInfo {
         shipInfoShell.close();
         Process processChmodBash = Runtime.getRuntime().exec("chmod u+x ../serverbash/ship.sh");
         Process processMakeBash = Runtime.getRuntime().exec("../serverbash/ship.sh");
+        processChmodBash.waitFor();
         processMakeBash.waitFor();
-        System.out.println(knownShip.getMmsi() + "YEAH!!");
     }
 
-    public void setShipInfoOfApi() throws Exception{
+    public shipInfoObject setShipInfoOfApi(shipInfoObject knownShip) throws Exception{
         JSONParser shipParser = new JSONParser();
         Object shipObject = shipParser.parse(new FileReader("../JSON/ship.json"));
         JSONObject shipJsonObject = (JSONObject) shipObject;
@@ -38,13 +38,12 @@ public class getShipInfo {
         Double speed = (Double) shipJsonObject.get("speedOverGround");
         Long lastUpdateShipInfo = (Long) shipJsonObject.get("timeLastUpdate");
 
-        shipInfoObject checkShip = new shipInfoObject();
-        checkShip.setSpeed(speed);
-        checkShip.setxCoor(xCoordinates);
-        checkShip.setyCoor(yCoordinates);
-        checkShip.setLastUpdateTime(lastUpdateShipInfo);
+        knownShip.setSpeed(speed);
+        knownShip.setxCoor(xCoordinates);
+        knownShip.setyCoor(yCoordinates);
+        knownShip.setLastUpdateTime(lastUpdateShipInfo);
 
-        System.out.println(checkShip.getMmsi() + ": Coor: " + checkShip.getxCoor() + "," + checkShip.getyCoor() + " Speed: " + checkShip.getSpeed() + " Update: " + checkShip.getLastUpdateTime());
-        InsertShipLocation.insertLocation(checkShip);
+        //InsertShipLocation.insertLocation(checkShip);
+        return knownShip;
     }
 }
