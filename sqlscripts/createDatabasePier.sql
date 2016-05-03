@@ -34,10 +34,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`shiptype` (
   `typename` VARCHAR(50) NOT NULL COMMENT '',
-  `length` INT NOT NULL COMMENT '',
-  `with` INT NOT NULL COMMENT '',
-  `capacity` INT NOT NULL COMMENT '',
-  `weight` INT NULL COMMENT '',
+  `typebignaam` VARCHAR(50) NOT NULL COMMENT '',
+  `shiplength` DOUBLE NOT NULL COMMENT '',
+  `shipwith` DOUBLE NOT NULL COMMENT '',
+  `shipdepth` DOUBLE NOT NULL COMMENT '',
+  `capacity` DOUBLE NOT NULL COMMENT '',
+  `weight` DOUBLE NULL COMMENT '',
   PRIMARY KEY (`typename`)  COMMENT '')
 ENGINE = InnoDB;
 
