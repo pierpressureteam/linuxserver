@@ -1,5 +1,6 @@
 package com.pier;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -19,9 +20,12 @@ public class Main {
                 timer.schedule( new TimerTask() {
                     public void run() {
                         try {
-                            ship.getShipOfApi();
-                            ship2.Calculate();
-                            //ship.setShipInfoOfApi();
+                            ArrayList<shipInfoObject> allShips = GetAllShipsFromDatabase.getAllShips();
+                            for(int i = 0; i < allShips.size(); i++) {
+                                ship.getShipOfApi(allShips.get(i));
+                                //ship2.Calculate();
+                                //ship.setShipInfoOfApi();
+                            }
                         }catch(Exception e){
                             System.out.println(e);
                         }

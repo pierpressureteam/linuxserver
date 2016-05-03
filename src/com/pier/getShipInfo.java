@@ -5,6 +5,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.*;
+import java.util.ArrayList;
 
 import static com.pier.Main.newestToken;
 
@@ -12,10 +13,10 @@ import static com.pier.Main.newestToken;
  * Created by rodero on 25-4-16.
  */
 public class getShipInfo {
-    public void getShipOfApi() throws Exception  {
+    public void getShipOfApi(shipInfoObject knownShip) throws Exception  {
         String tokenApi = newestToken.getToken();
         String bash = "#!/bin/bash \n";
-        String shell = "curl -X GET --header \"Accept: application/json\" --header \"Authorization: " + tokenApi + " \" \"http://backenddev.teqplay.nl/ship/244660136\" > ../JSON/ship.json";
+        String shell = "curl -X GET --header \"Accept: application/json\" --header \"Authorization: " + tokenApi + " \" \"http://backenddev.teqplay.nl/ship/"+ knownShip.getMmsi() + "\" > ../JSON/ship.json";
         Writer shipInfoShell = new BufferedWriter(new FileWriter("../serverbash/ship.sh"));
         shipInfoShell.write(bash);
         shipInfoShell.write(shell);
@@ -23,6 +24,7 @@ public class getShipInfo {
         Process processChmodBash = Runtime.getRuntime().exec("chmod u+x ../serverbash/ship.sh");
         Process processMakeBash = Runtime.getRuntime().exec("../serverbash/ship.sh");
         processMakeBash.waitFor();
+        System.out.println(knownShip.getMmsi() + "YEAH!!");
     }
 
     public void setShipInfoOfApi() throws Exception{
