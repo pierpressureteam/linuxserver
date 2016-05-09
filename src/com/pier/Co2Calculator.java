@@ -4,26 +4,38 @@ package com.pier;
  * Created by rodero on 26-4-16.
  */
 public class Co2Calculator {
-    public void Calculate(){
+    shipInfoObject calculateKnownShip;
+    public shipInfoObject Calculate(shipInfoObject knownShip){
+        calculateKnownShip = knownShip;
         Double answer1 = Resistance();
-        Double answer2 = Force(answer1);
-        Double answer3 = Energy(answer2);
-        Double answer4 = Volume(answer3);
-        Double answer5 = Emission(answer4);
-        System.out.println("CO2:" + answer5);
+        Double answer2 = TotalResistance(answer1);
+        Double answer3 = Force(answer2);
+        Double answer4 = Energy(answer3);
+        Double answer5 = Volume(answer4);
+        Double co2answer = Emission(answer5);
+        calculateKnownShip.setCO2(co2answer);
+        return calculateKnownShip;
     }
 
     public Double Resistance(){
-        Double V = 10.0;
-        Double L = 89.0;
+        Double V = 2.7; //calculateKnownShip.getSpeed();
+        Double L = calculateKnownShip.getLength();
+        Double B = calculateKnownShip.getWith();
+        Double D = calculateKnownShip.getDepth();
         Double v = Math.pow(10,-6);
         Double p = 998.0;
-        Double S = 1.0;
-        Double R = 0.075/Math.exp(Math.log10((V*L/v)-2))*0.5*p*Math.exp(V)*S;
+        Double S = L * B + 2 * L * Math.exp(D);
+        Double R = 0.075/(Math.exp(Math.log(V*L/v)-2))*0.5*p*Math.exp(V)*S;
         return R;
     }
-    public Double Force(Double R){
-        Double p = 2 * 1 * R;
+
+    public Double TotalResistance(Double R){
+        Double rt = (R + R) * 1000;
+        return rt;
+    }
+
+    public Double Force(Double rt){
+        Double p = 2 * 1 * rt;
         return p;
     }
     public Double Energy(Double p){

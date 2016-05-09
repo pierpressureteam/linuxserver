@@ -28,7 +28,8 @@ public class shipInfoObject {
     public void setCapacity(double capacitySetter) {capacity = capacitySetter;}
 
     public void setSpeed(double speedSetter){
-        speed = speedSetter;
+        double knToMS = speedSetter * 0.5144;
+        speed = knToMS;
     }
 
     public void setxCoor(double xCoorSetter){

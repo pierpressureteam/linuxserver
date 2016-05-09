@@ -38,6 +38,7 @@ public class GetAllShipsFromDatabase extends DatabaseConnection {
             }
             return allShips;
         }catch(Exception e){
+            //noinspection ThrowablePrintedToSystemOut
             System.out.println(e);
         }
         return null;

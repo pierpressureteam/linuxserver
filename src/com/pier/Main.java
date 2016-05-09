@@ -6,7 +6,6 @@ import java.util.TimerTask;
 
 public class Main {
     static ApiToken newestToken = new ApiToken();
-
             public static void main(String[] args) throws Exception {
                 ApiLogin.loginApi();
                 newestToken.setToken();
@@ -23,8 +22,9 @@ public class Main {
                             ArrayList<shipInfoObject> allShips = GetAllShipsFromDatabase.getAllShips();
                             for(int i = 0; i < allShips.size(); i++) {
                                 ship.getShipOfApi(allShips.get(i));
-                                //ship2.Calculate();
                                 allShips.set(i,ship.setShipInfoOfApi(allShips.get(i)));
+                                allShips.set(i,ship2.Calculate(allShips.get(i)));
+                                checkIfShipAndTimeExist(allShips.get(i));
                             }
                         }catch(Exception e){
                             System.out.println(e);
@@ -33,5 +33,15 @@ public class Main {
                 }, 0, 60*1000);
             }
 
+            private static void checkIfShipAndTimeExist(shipInfoObject knownShip){
+                GetLastTimeAIS checkTime = new GetLastTimeAIS();
+                Boolean checkTimeIfExist = checkTime.getLastTime(knownShip);
+
+                if(!checkTimeIfExist) {
+                    InsertShipLocation.insertLocation(knownShip);
+                    System.out.println("Inserted");
+                }
+
+            }
     }
 

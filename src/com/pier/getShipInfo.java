@@ -43,7 +43,6 @@ public class getShipInfo {
         knownShip.setyCoor(yCoordinates);
         knownShip.setLastUpdateTime(lastUpdateShipInfo);
 
-        //InsertShipLocation.insertLocation(checkShip);
         return knownShip;
     }
 }
