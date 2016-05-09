@@ -25,6 +25,7 @@ public class Main {
                                 allShips.set(i,ship.setShipInfoOfApi(allShips.get(i)));
                                 allShips.set(i,ship2.Calculate(allShips.get(i)));
                                 checkIfShipAndTimeExist(allShips.get(i));
+                                System.out.println(allShips.get(i).getMmsi());
                             }
                         }catch(Exception e){
                             System.out.println(e);
@@ -39,7 +40,6 @@ public class Main {
 
                 if(!checkTimeIfExist) {
                     InsertShipLocation.insertLocation(knownShip);
-                    System.out.println("Inserted");
                 }
 
             }

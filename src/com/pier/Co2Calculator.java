@@ -7,18 +7,18 @@ public class Co2Calculator {
     shipInfoObject calculateKnownShip;
     public shipInfoObject Calculate(shipInfoObject knownShip){
         calculateKnownShip = knownShip;
-        Double answer1 = Resistance();
-        Double answer2 = TotalResistance(answer1);
-        Double answer3 = Force(answer2);
-        Double answer4 = Energy(answer3);
-        Double answer5 = Volume(answer4);
-        Double co2answer = Emission(answer5);
+        Double r = Resistance();
+        Double tr = TotalResistance(r);
+        Double f = Force(tr);
+        Double e = Energy(f);
+        Double v = Volume(e);
+        Double co2answer = Emission(v);
         calculateKnownShip.setCO2(co2answer);
         return calculateKnownShip;
     }
 
     public Double Resistance(){
-        Double V = 2.7; //calculateKnownShip.getSpeed();
+        Double V = calculateKnownShip.getSpeed();
         Double L = calculateKnownShip.getLength();
         Double B = calculateKnownShip.getWith();
         Double D = calculateKnownShip.getDepth();
