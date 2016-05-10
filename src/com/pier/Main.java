@@ -25,7 +25,6 @@ public class Main {
                                 allShips.set(i,ship.setShipInfoOfApi(allShips.get(i)));
                                 allShips.set(i,ship2.Calculate(allShips.get(i)));
                                 checkIfShipAndTimeExist(allShips.get(i));
-                                System.out.println(allShips.get(i).getMmsi());
                             }
                         }catch(Exception e){
                             System.out.println(e);
@@ -34,12 +33,16 @@ public class Main {
                 }, 0, 60*1000);
             }
 
+
             private static void checkIfShipAndTimeExist(shipInfoObject knownShip){
                 GetLastTimeAIS checkTime = new GetLastTimeAIS();
                 Boolean checkTimeIfExist = checkTime.getLastTime(knownShip);
 
-                if(!checkTimeIfExist) {
+                if(!checkTimeIfExist && knownShip.getSpeed() != 0.0) {
                     InsertShipLocation.insertLocation(knownShip);
+                    System.out.println(knownShip.getMmsi() + ": it is inserted, Succes. CO2: " + knownShip.getCO2());
+                }else{
+                    System.out.println(knownShip.getMmsi() + ": it is already inserted, Failed. CO2: " + knownShip.getCO2());
                 }
 
             }

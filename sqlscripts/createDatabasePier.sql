@@ -25,6 +25,8 @@ CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`usersaccount` (
   `password` VARCHAR(40) NOT NULL COMMENT '',
   `email` VARCHAR(100) NOT NULL COMMENT '',
   `activated` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '',
+  `firstname` VARCHAR(40) NULL COMMENT '',
+  `lastname` VARCHAR(40) NULL COMMENT '',
   PRIMARY KEY (`username`)  COMMENT '')
 ENGINE = InnoDB;
 
@@ -34,7 +36,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`shiptype` (
   `typename` VARCHAR(50) NOT NULL COMMENT '',
-  `typebignaam` VARCHAR(50) NOT NULL COMMENT '',
+  `typebigname` VARCHAR(50) NOT NULL COMMENT '',
   `shiplength` DOUBLE NOT NULL COMMENT '',
   `shipwith` DOUBLE NOT NULL COMMENT '',
   `shipdepth` DOUBLE NOT NULL COMMENT '',
@@ -50,6 +52,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `pier_pressure_database`.`ships` (
   `mmsi` INT NOT NULL COMMENT '',
   `shiptype_typename` VARCHAR(50) NOT NULL COMMENT '',
+  `shipname` VARCHAR(50) NULL COMMENT '',
   PRIMARY KEY (`mmsi`, `shiptype_typename`)  COMMENT '',
   INDEX `fk_ships_shiptype1_idx` (`shiptype_typename` ASC)  COMMENT '',
   CONSTRAINT `fk_ships_shiptype1`

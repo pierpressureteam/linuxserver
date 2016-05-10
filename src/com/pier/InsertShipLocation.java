@@ -26,7 +26,6 @@ public class InsertShipLocation extends DatabaseConnection{
 
         // execute the preparedstatement
         preparedStmt.execute();
-            System.out.println("Succes");
 
         conn.close();
     }

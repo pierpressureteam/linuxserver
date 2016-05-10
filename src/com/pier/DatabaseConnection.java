@@ -7,7 +7,7 @@ import java.sql.*;
  */
 public class DatabaseConnection{
     static String myDriver = "org.gjt.mm.mysql.Driver";
-    static String myUrl = "jdbc:mysql://localhost/pier_pressure_database";
+    static String myUrl = "jdbc:mysql://localhost/pier_pressure_database?useSSL=false";
     static String username = "root";
     static String password = "Lucky2002";
 }
