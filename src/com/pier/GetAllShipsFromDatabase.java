@@ -16,7 +16,7 @@ public class GetAllShipsFromDatabase extends DatabaseConnection {
             Class.forName(myDriver);
             Connection conn = DriverManager.getConnection(myUrl, username, password);
 
-            String query = "SELECT mmsi,typename,typebigname,shiplength,shipwith,shipdepth,capacity FROM ships,shiptype WHERE shiptype_typename = typename;";
+            String query = "SELECT mmsi,typename,typebignaam,shiplength,shipwith,shipdepth,capacity FROM ships,shiptype WHERE shiptype_typename = typename;";
 
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
