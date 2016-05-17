@@ -7,7 +7,7 @@
       </element>
       <element id="module-output" name="linuxserver" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/json-simple-1.1.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="/usr/share/java/mysql.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.39/mysql-connector-java-5.1.39-bin.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
