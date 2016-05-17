@@ -6,9 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10ef8032-3378-4731-ae67-d9cf7de67724" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/linuxserver_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/linuxserver_jar.xml" />
-    </list>
+    <list default="true" id="10ef8032-3378-4731-ae67-d9cf7de67724" name="Default" comment="" />
     <ignored path="linuxserver.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -119,8 +117,8 @@
       <file leaf-file-name="GetAllShipsFromDatabase.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/pier/GetAllShipsFromDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3991131">
-              <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.46563193">
+              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="60" />
               <folding>
                 <marker date="1463469750329" expanded="true" signature="524:650" placeholder="SELECT mmsi,..ships..." />
               </folding>
@@ -420,12 +418,12 @@
       <created>1461591306984</created>
       <option name="number" value="Default" />
       <updated>1461591306984</updated>
-      <workItem from="1463470471140" duration="321000" />
+      <workItem from="1463470471140" duration="440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321000" />
+    <option name="totallyTimeSpent" value="440000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -895,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pier/GetAllShipsFromDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3991131">
-          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.46563193">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="60" />
           <folding>
             <marker date="1463469750329" expanded="true" signature="524:650" placeholder="SELECT mmsi,..ships..." />
           </folding>
