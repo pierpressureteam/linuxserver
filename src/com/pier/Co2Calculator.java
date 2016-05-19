@@ -44,7 +44,7 @@ public class Co2Calculator {
     }
     public Double Energy(Double p){
         Double t = 1.0;
-        Double E = p * t;
+        Double E = p * (t/60);
         return E;
     }
     public Double Volume(Double E){

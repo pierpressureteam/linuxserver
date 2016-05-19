@@ -7,8 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10ef8032-3378-4731-ae67-d9cf7de67724" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/pier/ApiToken.java" afterPath="$PROJECT_DIR$/src/com/pier/ApiToken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/pier/Co2Calculator.java" afterPath="$PROJECT_DIR$/src/com/pier/Co2Calculator.java" />
     </list>
     <ignored path="linuxserver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiToken.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApiToken.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/pier/ApiToken.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7649667">
+            <state vertical-scroll-proportion="0.0">
               <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
               <folding />
             </state>
@@ -97,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Co2Calculator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Co2Calculator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/pier/Co2Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.9002217">
+              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -164,12 +163,12 @@
         <option value="$PROJECT_DIR$/src/com/pier/getShipInfo.java" />
         <option value="$PROJECT_DIR$/src/com/pier/getLastTimeAIS.java" />
         <option value="$PROJECT_DIR$/src/com/pier/GetLastTimeAIS.java" />
-        <option value="$PROJECT_DIR$/src/com/pier/Co2Calculator.java" />
         <option value="$PROJECT_DIR$/src/com/pier/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/com/pier/GetAllShipsFromDatabase.java" />
         <option value="$PROJECT_DIR$/src/com/pier/InsertShipLocation.java" />
         <option value="$PROJECT_DIR$/src/com/pier/Main.java" />
         <option value="$PROJECT_DIR$/src/com/pier/ApiToken.java" />
+        <option value="$PROJECT_DIR$/src/com/pier/Co2Calculator.java" />
       </list>
     </option>
   </component>
@@ -436,15 +435,15 @@
       <option name="number" value="Default" />
       <updated>1461591306984</updated>
       <workItem from="1463470471140" duration="1606000" />
-      <workItem from="1463655303894" duration="1107000" />
+      <workItem from="1463655303894" duration="1380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2713000" />
+    <option name="totallyTimeSpent" value="2986000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -832,14 +831,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pier/GetLastTimeAIS.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/pier/Co2Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pier/getShipInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -876,14 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/pier/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pier/GetAllShipsFromDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -914,8 +897,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pier/ApiToken.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7649667">
+        <state vertical-scroll-proportion="0.0">
           <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/pier/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/pier/Co2Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9002217">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding />
         </state>
       </provider>
