@@ -19,7 +19,12 @@ INSERT INTO usersaccount (username,password,email,activated) VALUES ("admin","ad
 INSERT INTO ships (mmsi,shiptype_typename,shipname) VALUES (244660136,"IV","Primo");
 INSERT INTO ships (mmsi,shiptype_typename,shipname) VALUES (244660134,"IV","Aldeano");
 INSERT INTO ships (mmsi,shiptype_typename,shipname) VALUES (244750773,"IV","Maria-Helena");
+INSERT INTO ships (mmsi,shiptype_typename,shipname) VALUES (244730402,"IV","Readiness");
+INSERT INTO ships (mmsi,shiptype_typename,shipname) VALUES (244730609,"IV+","Allegro");
+
 
 INSERT INTO usersaccount_has_ships (usersaccount_username,ships_mmsi) VALUES ("admin",244660136);
 INSERT INTO usersaccount_has_ships (usersaccount_username,ships_mmsi) VALUES ("admin",244660134);
 INSERT INTO usersaccount_has_ships (usersaccount_username,ships_mmsi) VALUES ("admin",244750773);
+INSERT INTO usersaccount_has_ships (usersaccount_username,ships_mmsi) VALUES ("admin",244730402);
+INSERT INTO usersaccount_has_ships (usersaccount_username,ships_mmsi) VALUES ("admin",244730609);
